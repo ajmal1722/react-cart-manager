@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className='bg-red-700 flex justify-between px-8 py-6 text-white'>
             <section className='flex item-center gap-4'>
                 {/* Menu Icon */}
-                <IoMenuSharp className='text-3xl' onClick={toggleNavbar}>
+                <IoMenuSharp className='text-3xl cursor-pointer lg:hidden' onClick={toggleNavbar}>
 
                 </IoMenuSharp>
                 {/* Logo */}
@@ -34,6 +34,13 @@ const Navbar = () => {
                     </section>
                 </div>
             )}
+
+            {/* desktop nav-items */}
+            <div className='hidden lg:flex'>
+                <a href="" className='mx-4 text-xl'>Home</a>
+                <a href="" className='mx-4 text-xl'>Products</a>
+                <a href="" className='mx-4 text-xl'>Contact</a>
+            </div>
 
             <section className="">
                 {/* Cart Icon */}
