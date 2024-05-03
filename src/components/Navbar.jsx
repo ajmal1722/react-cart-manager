@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { IoMenuSharp, IoCart, IoClose } from 'react-icons/io5';
 import { useState } from 'react';
 
@@ -37,9 +37,9 @@ const Navbar = () => {
 
             {/* desktop nav-items */}
             <div className='hidden lg:flex'>
-                <a href="" className='mx-4 text-xl'>Home</a>
-                <a href="" className='mx-4 text-xl'>Products</a>
-                <a href="" className='mx-4 text-xl'>Contact</a>
+                <NavLink to={'/'} className='mx-4 text-xl'>Home</NavLink>
+                <NavLink to={'/products'} className='mx-4 text-xl'>Products</NavLink>
+                <NavLink to={'/contact'} className='mx-4 text-xl'>Contact</NavLink>
             </div>
 
             <section className="">
