@@ -9,6 +9,10 @@ const Navbar = () => {
     const toggleNavbar = () => {
         setSidebar(prevState => !prevState)
     };
+
+    const activeLInkClass = ({ isActive }) => isActive ?
+        'mx-4 text-xl underline underline-offset-[10px]' :
+        'mx-4 text-xl'
     
     return (
         <nav className='bg-red-700 flex justify-between px-8 py-6 text-white'>
@@ -37,9 +41,9 @@ const Navbar = () => {
 
             {/* desktop nav-items */}
             <div className='hidden lg:flex'>
-                <NavLink to={'/'} className='mx-4 text-xl'>Home</NavLink>
-                <NavLink to={'/products'} className='mx-4 text-xl'>Products</NavLink>
-                <NavLink to={'/contact'} className='mx-4 text-xl'>Contact</NavLink>
+                <NavLink to={'/'} className={activeLInkClass}>Home</NavLink>
+                <NavLink to={'/products'} className={activeLInkClass}>Products</NavLink>
+                <NavLink to={'/contact'} className={activeLInkClass}>Contact</NavLink>
             </div>
 
             <section className="">
