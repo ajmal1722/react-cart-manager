@@ -1,4 +1,5 @@
 import productList from '../products.json';
+import ViewCart from './ViewCart';
 
 const ProductsCard = () => {
     return (
@@ -13,7 +14,7 @@ const ProductsCard = () => {
                                 <p className="text-gray-700 text-base">{item.description}</p>
                                 <div className="mt-4">
                                     <span className="text-gray-900 font-bold">Price:</span>
-                                    <span className="text-gray-700">{item.price}</span>
+                                    <span className="text-gray-700 px-2">{item.price}</span>
                                 </div>
                                 <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
                             </div>
@@ -21,6 +22,7 @@ const ProductsCard = () => {
                     </div>
                 );
             })}
+            <ViewCart/>
         </div>
     );
 };
