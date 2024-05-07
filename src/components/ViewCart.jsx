@@ -16,8 +16,8 @@ const ViewCart = () => {
         dispatch(view_cart({ viewCart: !isViewCart }))
     }
     return (
-        <div className='fixed top-0 right-0 h-full w-screen backdrop-blur-sm'>
-            <div className="bg-white h-full lg:w-1/2 md:w-2/3 w-screen absolute right-0">
+        <div className='fixed top-0 right-0 h-full w-screen backdrop-blur-sm overflow-y-auto'>
+            <div className="bg-white lg:w-1/2 md:w-2/3 w-screen absolute right-0 min-h-screen">
                 <div className="flex justify-end p-6 mb-5">
                     <button onClick={displayCart} className='text-2xl font-semibold text-gray-900'>
                         X
@@ -31,7 +31,7 @@ const ViewCart = () => {
                                     <img src={product.image} className='h-20'/>
                                 </div>
                                 <div className="text-lg">
-                                    {product.price}
+                                    ${product.price}
                                 </div>
                                 <div className='flex' >
                                     <CiCirclePlus className='text-2xl'/>
