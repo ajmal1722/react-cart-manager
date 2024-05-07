@@ -1,7 +1,11 @@
 import productList from '../products.json';
+import { view_cart } from '../redux/cart/ViewCartSlice';
 import ViewCart from './ViewCart';
+import { useSelector } from 'react-redux';
 
 const ProductsCard = () => {
+    const isViewCart = useSelector(state => state.viewCart.value)
+
     return (
         <div className="flex flex-wrap justify-center">
             {productList.map((item, index) => {
@@ -22,7 +26,10 @@ const ProductsCard = () => {
                     </div>
                 );
             })}
-            <ViewCart/>
+
+            { isViewCart && (
+                <ViewCart/>
+            )}
         </div>
     );
 };
