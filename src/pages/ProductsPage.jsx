@@ -1,11 +1,9 @@
-import React from 'react'
+import ProductsCard from "../components/ProductsCard"
 
 const ProductsPage = () => {
     return (
         <>
-            <h1 className='text-3xl text-center my-6'>
-                Product page
-            </h1>
+            <ProductsCard/>
         </>
     )
 }

@@ -1,0 +1,67 @@
+[
+    {
+        "id": 1,
+        "title": "BULLMER",
+        "price": 109.95,
+        "description": "Trendy Regular Fit Printed Causal Shirt for Men - Pack of ",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/51xbFaQC2aL.SY879.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Lymio ",
+        "price": 22.3,
+        "description": " Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt (Rib-",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/71V5gEc8YVL.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Leriya Fashion",
+        "price": 55.99,
+        "description": "Shirt for Men | Tropical Leaf Printed Rayon Shirts for Men |",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/61SmsCyfZOL.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 4,
+        "title": "Leriya Fashion",
+        "price": 15.99,
+        "description": "Textured Shirts for Men || Casual Shirt for Men || Shirt fo",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/715Gcc34mvL.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 5,
+        "title": "Lymio",
+        "price": 695,
+        "description": "Casual Shirt for Men|| Regular Fit Shirt for Men|| Men Stylish",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/61wyfIo5XvL.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 6,
+        "title": "Lymio ",
+        "price": 168,
+        "description": "Casual Shirt for Men|| Shirt for Men|| Men Stylish Shirt || Men",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/71kkSLQhcGL.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 7,
+        "title": "DHRUVI TRENDZ",
+        "price": 9.99,
+        "description": "Men's Regular Fit Shirt",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/71OKaQZbj5L.AC_UL480_QL65.jpg"
+      },
+      {
+        "id": 9,
+        "title": "Leriya ",
+        "price": 64,
+        "description": "Short Sleeves Hawaiian Beach Shirt || Perfect for Camp || Outing || Summer Wear Shirt for Boys",
+        "category": "Shirt",
+        "image": "https://m.media-amazon.com/images/I/71o1XQw6mxL.AC_UL480_QL65.jpg"
+      }
+      
+]
