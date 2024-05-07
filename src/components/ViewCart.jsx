@@ -1,10 +1,15 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { view_cart } from '../redux/cart/ViewCartSlice'
+import { MdDelete } from 'react-icons/md'
 
 const ViewCart = () => {
     const dispatch = useDispatch()
     const isViewCart = useSelector(state => state.viewCart.value);
+
+    // const cartElementsDispatch = useDispatch()
+    const cartElements = useSelector(state => state.addToCart.value)
+    console.log(cartElements)
 
     const displayCart = () => {
         dispatch(view_cart({ viewCart: !isViewCart }))
@@ -17,11 +22,20 @@ const ViewCart = () => {
                         X
                     </button>
                 </div>
-                <div className="border-2 rounded-xl h-24 m-2">
-                    <div className="flex">
-
-                    </div>
-                </div>
+                { cartElements.map(product => {
+                    return (
+                        <div className="border-2 rounded-xl h-24 m-2">
+                            <div className="flex items-center justify-between text-black">
+                                <div className="w-20 h-20 mx-6 my-2">
+                                    <img src={product.image} className='h-20'/>
+                                </div>
+                                <div className='w-12'>
+                                    <MdDelete className='text-xl'/>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })}
             </div>
         </div>
     )

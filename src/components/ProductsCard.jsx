@@ -1,6 +1,14 @@
 import productList from '../products.json';
+import { useSelector, useDispatch } from 'react-redux'
+import { addto_cart } from '../redux/cart/addToCartSlice';
 
 const ProductsCard = () => {
+    const cartElements = useSelector(state => state.addToCart.value);
+    const dispatch = useDispatch()
+
+    const addToCart = (item) => {
+        dispatch(addto_cart(item));
+    };
 
     return (
         <div className="flex flex-wrap justify-center">
@@ -16,7 +24,9 @@ const ProductsCard = () => {
                                     <span className="text-gray-900 font-bold">Price:</span>
                                     <span className="text-gray-700 px-2">{item.price}</span>
                                 </div>
-                                <button className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add to Cart</button>
+                                <button onClick={() => addToCart(item)} className="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                    Add to Cart
+                                </button>
                             </div>
                         </div>
                     </div>
