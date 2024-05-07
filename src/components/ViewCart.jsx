@@ -2,6 +2,7 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { view_cart } from '../redux/cart/ViewCartSlice'
 import { MdDelete } from 'react-icons/md'
+import { CiCirclePlus, CiCircleMinus } from 'react-icons/ci'
 
 const ViewCart = () => {
     const dispatch = useDispatch()
@@ -28,6 +29,16 @@ const ViewCart = () => {
                             <div className="flex items-center justify-between text-black">
                                 <div className="w-20 h-20 mx-6 my-2">
                                     <img src={product.image} className='h-20'/>
+                                </div>
+                                <div className="text-lg">
+                                    {product.price}
+                                </div>
+                                <div className='flex' >
+                                    <CiCirclePlus className='text-2xl'/>
+                                    <div className='mx-3'>
+                                        1
+                                    </div>
+                                    <CiCircleMinus className='text-2xl'/>
                                 </div>
                                 <div className='w-12'>
                                     <MdDelete className='text-xl'/>
