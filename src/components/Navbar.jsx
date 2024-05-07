@@ -1,8 +1,18 @@
 import { Link, NavLink } from 'react-router-dom';
 import { IoMenuSharp, IoCart, IoClose } from 'react-icons/io5';
 import { useState } from 'react';
+import ViewCart from './ViewCart';
+import { view_cart } from '../redux/cart/ViewCartSlice';
+import { useSelector, useDispatch } from 'react-redux';
 
 const Navbar = () => {
+    const dispatch = useDispatch();
+    const isViewCart = useSelector(state => state.viewCart.value);
+
+    const displayCart = () => {
+        console.log('button clicked..')
+        dispatch(view_cart({ viewCart: !isViewCart }));
+    }
 
     const [sidebarOpen, setSidebar] = useState(false);
 
@@ -46,10 +56,14 @@ const Navbar = () => {
                 <NavLink to={'/contact'} className={activeLInkClass}>Contact</NavLink>
             </div>
 
-            <section className="">
+            <button>
                 {/* Cart Icon */}
-                <IoCart className='text-2xl'></IoCart>
-            </section>
+                <IoCart className='text-2xl cursor-pointer' onClick={displayCart}></IoCart>
+            </button>
+
+            { isViewCart && (
+                <ViewCart/>
+            )}
         </nav>
     )
 }

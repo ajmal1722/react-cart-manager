@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const viewCartSlice = createSlice({
     name: 'viewCart',
     initialState: {
-        value: true
+        value: false
     },
     reducers: {
         view_cart: (state, action) => {
