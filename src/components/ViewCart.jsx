@@ -1,6 +1,7 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { view_cart } from '../redux/cart/ViewCartSlice'
+import { remove_item } from '../redux/cart/addToCartSlice'
 import { MdDelete } from 'react-icons/md'
 import { CiCirclePlus, CiCircleMinus } from 'react-icons/ci'
 
@@ -15,6 +16,11 @@ const ViewCart = () => {
     const displayCart = () => {
         dispatch(view_cart({ viewCart: !isViewCart }))
     }
+
+    const removeFromCart = (index) => {
+        dispatch(remove_item(index))
+    }
+
     return (
         <div className='fixed top-0 right-0 h-full w-screen backdrop-blur-sm overflow-y-auto'>
             <div className="bg-white lg:w-1/2 md:w-2/3 w-screen absolute right-0 min-h-screen">
@@ -23,9 +29,9 @@ const ViewCart = () => {
                         X
                     </button>
                 </div>
-                { cartElements.map(product => {
+                { cartElements.map((product, index) => {
                     return (
-                        <div className="border-2 rounded-xl h-24 m-2">
+                        <div key={index} className="border-2 rounded-xl h-24 m-2">
                             <div className="flex items-center justify-between text-black">
                                 <div className="w-20 h-20 mx-6 my-2">
                                     <img src={product.image} className='h-20'/>
@@ -41,7 +47,7 @@ const ViewCart = () => {
                                     <CiCircleMinus className='text-2xl'/>
                                 </div>
                                 <div className='w-12'>
-                                    <MdDelete className='text-xl'/>
+                                    <MdDelete onClick={() => removeFromCart(index)} className='text-xl cursor-pointer'/>
                                 </div>
                             </div>
                         </div>
