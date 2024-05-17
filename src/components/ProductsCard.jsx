@@ -1,6 +1,7 @@
 import productList from '../products.json';
 import { useSelector, useDispatch } from 'react-redux'
 import { addto_cart } from '../redux/cart/addToCartSlice';
+import toast, { Toaster } from 'react-hot-toast';
 
 const ProductsCard = () => {
     const cartElements = useSelector(state => state.addToCart.value);
@@ -8,6 +9,7 @@ const ProductsCard = () => {
 
     const addToCart = (item) => {
         dispatch(addto_cart(item));
+        toast.success('Item added to Cart!')
     };
 
     return (
@@ -29,6 +31,7 @@ const ProductsCard = () => {
                                 </button>
                             </div>
                         </div>
+                    <Toaster/>
                     </div>
                 );
             })}
