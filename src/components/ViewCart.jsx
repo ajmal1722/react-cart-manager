@@ -4,6 +4,7 @@ import { view_cart } from '../redux/cart/ViewCartSlice'
 import { remove_item } from '../redux/cart/addToCartSlice'
 import { MdDelete } from 'react-icons/md'
 import { CiCirclePlus, CiCircleMinus } from 'react-icons/ci'
+import toast, { Toaster } from 'react-hot-toast';
 
 const ViewCart = () => {
     const dispatch = useDispatch()
@@ -19,6 +20,7 @@ const ViewCart = () => {
 
     const removeFromCart = (index) => {
         dispatch(remove_item(index))
+        toast.success('Item removed from cart succesfully!')
     }
 
     return (
@@ -50,6 +52,7 @@ const ViewCart = () => {
                                     <MdDelete onClick={() => removeFromCart(index)} className='text-xl cursor-pointer'/>
                                 </div>
                             </div>
+                            <Toaster/>
                         </div>
                     )
                 })}
